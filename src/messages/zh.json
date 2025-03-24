@@ -1,0 +1,20 @@
+{
+  "title": "图片故障效果生成器",
+  "upload": {
+    "button": "选择图片"
+  },
+  "settings": {
+    "title": "效果设置",
+    "effects": {
+      "shift": "位移",
+      "noise": "噪点",
+      "scan": "扫描线",
+      "wave": "波浪"
+    },
+    "strength": "强度",
+    "color": "保持颜色",
+    "apply": "应用效果",
+    "regenerate": "重新生成",
+    "download": "下载图片"
+  }
+} 

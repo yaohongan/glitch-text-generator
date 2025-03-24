@@ -1,0 +1,58 @@
+{
+  "app": {
+    "title": "Glitch Text Generator",
+    "description": "Transform your text into cool glitch effects"
+  },
+  "navigation": {
+    "home": "Home",
+    "features": "Features",
+    "how-it-works": "How It Works",
+    "examples": "Examples",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Create Stylish Glitch Text Effects",
+    "subtitle": "Transform normal text into eye-catching glitch effects in seconds",
+    "cta": "Try it now"
+  },
+  "generator": {
+    "title": "Text Transformer",
+    "inputLabel": "Enter your text",
+    "inputPlaceholder": "Type something here...",
+    "generateButton": "Generate Effect",
+    "copyButton": "Copy",
+    "copied": "Copied!",
+    "resetButton": "Reset",
+    "effectType": "Effect Type",
+    "intensity": "Intensity",
+    "result": "Result",
+    "effects": {
+      "zalgo": "Zalgo Effect",
+      "alternatingCase": "Alternating Case",
+      "randomReplace": "Random Character Replacement"
+    }
+  },
+  "features": {
+    "title": "Features",
+    "instant": {
+      "title": "Instant Transformation",
+      "description": "Convert your text to glitch effect in real-time without any delay"
+    },
+    "variety": {
+      "title": "Multiple Effects",
+      "description": "Choose from various glitch styles to match your needs"
+    },
+    "simple": {
+      "title": "Easy to Use",
+      "description": "Simple interface that anyone can use without technical knowledge"
+    },
+    "free": {
+      "title": "Completely Free",
+      "description": "No hidden fees or subscriptions required"
+    }
+  },
+  "footer": {
+    "copyright": "© 2023 Glitch Text Generator. All rights reserved.",
+    "language": "Language"
+  }
+} 

@@ -1,0 +1,75 @@
+{
+  "home": {
+    "title": "故障文本生成器",
+    "description": "创造独特的故障文本效果。支持多种风格，包括Zalgo、Vaporwave、Matrix等。简单易用，立即尝试！",
+    "guide": {
+      "title": "使用指南",
+      "input": {
+        "title": "输入文本",
+        "description": "在文本框中输入你想要转换的文字。支持中文、英文等多种语言。"
+      },
+      "select": {
+        "title": "选择效果",
+        "description": "从多种故障效果中选择，调整强度参数以获得理想的效果。"
+      },
+      "copy": {
+        "title": "复制使用",
+        "description": "点击复制按钮获取转换后的文本，可直接用于社交媒体、设计作品等。"
+      }
+    },
+    "effects": {
+      "title": "效果说明",
+      "zalgo": {
+        "title": "Zalgo",
+        "description": "经典的故障文本效果，在字符上下添加组合符号，创造诡异的视觉效果。"
+      },
+      "vaporwave": {
+        "title": "Vaporwave",
+        "description": "将文本转换为全角字符，营造复古蒸汽波美学风格。"
+      },
+      "matrix": {
+        "title": "Matrix",
+        "description": "模拟黑客帝国风格，将文字随机转换为日文假名和数字。"
+      },
+      "binary": {
+        "title": "Binary",
+        "description": "将部分文字转换为二进制数字，创造数字故障效果。"
+      },
+      "corrupt": {
+        "title": "Corrupt",
+        "description": "模拟文件损坏效果，随机替换字符编码。"
+      }
+    }
+  },
+  "gallery": {
+    "title": "文本效果展示",
+    "description": "探索各种文本故障效果的创意应用。点击作品可以查看详情和复制效果文本。",
+    "items": {
+      "cyberpunk": {
+        "title": "赛博朋克标题",
+        "description": "使用Zalgo效果创造的赛博朋克风格标题，适合科幻主题设计"
+      },
+      "vaporwave": {
+        "title": "蒸汽波品牌",
+        "description": "使用全角字符创造复古蒸汽波效果，适合品牌设计"
+      },
+      "matrix": {
+        "title": "黑客帝国代码",
+        "description": "模拟黑客帝国风格的文本效果，适合科技主题"
+      },
+      "digital": {
+        "title": "数字故障",
+        "description": "将文本转换为二进制风格，创造数字故障效果"
+      }
+    },
+    "modal": {
+      "copyButton": "复制文本",
+      "closeButton": "关闭"
+    }
+  },
+  "nav": {
+    "home": "首页",
+    "gallery": "展示",
+    "blog": "博客"
+  }
+} 

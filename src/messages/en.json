@@ -1,0 +1,20 @@
+{
+  "title": "Image Glitch Effect Generator",
+  "upload": {
+    "button": "Choose Image"
+  },
+  "settings": {
+    "title": "Effect Settings",
+    "effects": {
+      "shift": "Shift",
+      "noise": "Noise",
+      "scan": "Scan Lines",
+      "wave": "Wave"
+    },
+    "strength": "Strength",
+    "color": "Keep Colors",
+    "apply": "Apply Effect",
+    "regenerate": "Regenerate",
+    "download": "Download Image"
+  }
+} 

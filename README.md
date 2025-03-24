@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 故障文本生成器 (Glitch Text Generator)
 
-## Getting Started
+## 项目概述
 
-First, run the development server:
+这是一个基于Web的故障文本生成器，能够将普通文本转换为各种风格的"故障"效果文本，适用于社交媒体个性化、游戏用户名、特殊场合文本装饰等场景。本项目旨在提供简单易用、功能丰富的文本转换体验，并通过独特的视觉风格和用户体验与竞品形成差异化。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 需求理解
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+基于对竞品分析的结果，我们理解用户需求主要包括：
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **易用性**：简单的输入-输出界面，无需复杂操作
+2. **多样性**：提供多种不同风格的故障文本效果
+3. **可定制性**：能够调整字符变形的程度和类型
+4. **分享便利性**：快速复制功能，便于在社交媒体使用
+5. **教育性**：了解故障文本的原理和文化背景
+6. **跨平台兼容性**：生成的文本可在各种平台正常显示
+7. **国际化支持**：支持多种语言，满足全球用户需求
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 实现方案
 
-## Learn More
+### 技术选型
 
-To learn more about Next.js, take a look at the following resources:
+- **前端框架**：React.js + Next.js
+- **样式方案**：Tailwind CSS
+- **国际化方案**：next-intl / next-i18next
+- **部署方式**：Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 功能实现规划
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**一期实现（基础功能）**：
+- 基本的故障文本生成（Zalgo效果）
+- 可调节的"故障程度"滑块（上/中/下三个方向的变形控制）
+- 5-8种预设故障文本风格
+- 一键复制功能
+- 响应式设计，适配移动端和桌面端
+- 暗色主题，符合故障文本的视觉风格
+- 关于故障文本原理的简单解释和使用指南
+- 多语言支持（默认英文，支持切换至其他语言，所有页面内容跟随语言设置变化）
 
-## Deploy on Vercel
+**二期实现（进阶功能）**：
+- 扩展至15+种故障文本风格
+- 自定义文本效果（组合不同效果）
+- 动态故障效果预览
+- 一键分享到社交媒体
+- 保存历史生成记录
+- 故障文本图片生成功能
+- 批量文本处理
+- 故障文本转回普通文本的还原功能
+- 主题切换（如万圣节特别主题）
+- 扩展更多语言支持
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 项目进度记录
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 2025-03-23
+- 完成项目初始化
+- 创建项目README文档
+- 明确一期、二期功能列表
+- 规划下一步实施计划
+- 添加多语言支持需求
+
+## 下一步计划
+
+1. 搭建项目基础架构（Next.js项目创建、配置、路由设计）
+2. 配置国际化框架，初始化英文和其他语言的翻译文件
+3. 实现基础UI布局（输入区、输出区、控制面板）
+4. 编写核心文本转换算法，实现基本的Zalgo文本效果
+5. 开发文本效果调整功能和预设样式
+6. 完善复制功能和移动端适配
+7. 添加使用指南和背景知识内容
+8. 实现语言切换功能和多语言内容展示
+9. 部署测试版本，收集反馈
+
+## 项目团队
+
+- 产品负责人：[待定]
+- 前端开发：[待定]
+- UI/UX设计：[待定]
+- 测试：[待定]
+
+## 参考资料
+
+- LingoJam: https://lingojam.com/GlitchTextGenerator
+- Zalgo.org: https://zalgo.org/
+- PicsArt: https://tools.picsart.com/text/font-generator/glitch/ 

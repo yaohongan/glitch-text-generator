@@ -1,0 +1,20 @@
+{
+  "title": "이미지 글리치 효과 생성기",
+  "upload": {
+    "button": "이미지 선택"
+  },
+  "settings": {
+    "title": "효과 설정",
+    "effects": {
+      "shift": "시프트",
+      "noise": "노이즈",
+      "scan": "스캔라인",
+      "wave": "웨이브"
+    },
+    "strength": "강도",
+    "color": "색상 유지",
+    "apply": "효과 적용",
+    "regenerate": "재생성",
+    "download": "이미지 다운로드"
+  }
+} 

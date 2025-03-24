@@ -1,0 +1,58 @@
+{
+  "app": {
+    "title": "故障文本生成器",
+    "description": "将您的文本转换成酷炫的故障效果"
+  },
+  "navigation": {
+    "home": "首页",
+    "features": "功能",
+    "how-it-works": "工作原理",
+    "examples": "示例",
+    "faq": "常见问题"
+  },
+  "hero": {
+    "title": "创建时尚的故障文本效果",
+    "subtitle": "几秒钟内将普通文本转换为吸引眼球的故障效果",
+    "cta": "立即尝试"
+  },
+  "generator": {
+    "title": "文本转换器",
+    "inputLabel": "输入您的文本",
+    "inputPlaceholder": "在这里输入内容...",
+    "generateButton": "生成效果",
+    "copyButton": "复制",
+    "copied": "已复制！",
+    "resetButton": "重置",
+    "effectType": "效果类型",
+    "intensity": "强度",
+    "result": "生成结果",
+    "effects": {
+      "zalgo": "Zalgo 效果",
+      "alternatingCase": "交替大小写",
+      "randomReplace": "随机字符替换"
+    }
+  },
+  "features": {
+    "title": "功能特点",
+    "instant": {
+      "title": "即时转换",
+      "description": "实时将您的文本转换为故障效果，无需等待"
+    },
+    "variety": {
+      "title": "多种效果",
+      "description": "选择各种故障风格以满足您的需求"
+    },
+    "simple": {
+      "title": "易于使用",
+      "description": "简单的界面，无需技术知识即可使用"
+    },
+    "free": {
+      "title": "完全免费",
+      "description": "无隐藏费用或订阅要求"
+    }
+  },
+  "footer": {
+    "copyright": "© 2023 故障文本生成器。保留所有权利。",
+    "language": "语言"
+  }
+} 

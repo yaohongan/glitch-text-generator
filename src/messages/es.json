@@ -1,0 +1,20 @@
+{
+  "title": "Generador de Efectos Glitch para Imágenes",
+  "upload": {
+    "button": "Elegir Imagen"
+  },
+  "settings": {
+    "title": "Configuración de Efectos",
+    "effects": {
+      "shift": "Desplazamiento",
+      "noise": "Ruido",
+      "scan": "Líneas de Escaneo",
+      "wave": "Onda"
+    },
+    "strength": "Intensidad",
+    "color": "Mantener Colores",
+    "apply": "Aplicar Efecto",
+    "regenerate": "Regenerar",
+    "download": "Descargar Imagen"
+  }
+} 

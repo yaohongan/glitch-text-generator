@@ -1,0 +1,75 @@
+{
+  "home": {
+    "title": "Glitch Text Generator",
+    "description": "Create unique glitch text effects. Supporting multiple styles including Zalgo, Vaporwave, Matrix, and more. Easy to use, try it now!",
+    "guide": {
+      "title": "Usage Guide",
+      "input": {
+        "title": "Input Text",
+        "description": "Enter the text you want to transform. Supports multiple languages including English, Chinese, and more."
+      },
+      "select": {
+        "title": "Choose Effect",
+        "description": "Select from various glitch effects and adjust intensity parameters to achieve your desired effect."
+      },
+      "copy": {
+        "title": "Copy & Use",
+        "description": "Click the copy button to get the transformed text, ready to use in social media, design work, and more."
+      }
+    },
+    "effects": {
+      "title": "Effect Descriptions",
+      "zalgo": {
+        "title": "Zalgo",
+        "description": "Classic glitch text effect, adding combining characters above and below text to create an eerie visual effect."
+      },
+      "vaporwave": {
+        "title": "Vaporwave",
+        "description": "Converts text to full-width characters, creating a retro vaporwave aesthetic style."
+      },
+      "matrix": {
+        "title": "Matrix",
+        "description": "Simulates The Matrix style, randomly converting text to Japanese kana and numbers."
+      },
+      "binary": {
+        "title": "Binary",
+        "description": "Converts parts of text to binary numbers, creating a digital glitch effect."
+      },
+      "corrupt": {
+        "title": "Corrupt",
+        "description": "Simulates file corruption effect by randomly replacing character encodings."
+      }
+    }
+  },
+  "gallery": {
+    "title": "Text Effect Showcase",
+    "description": "Explore creative applications of various text glitch effects. Click on works to view details and copy effect text.",
+    "items": {
+      "cyberpunk": {
+        "title": "Cyberpunk Title",
+        "description": "Cyberpunk style title created with Zalgo effect, perfect for sci-fi themed designs"
+      },
+      "vaporwave": {
+        "title": "Vaporwave Brand",
+        "description": "Retro vaporwave effect using full-width characters, ideal for brand design"
+      },
+      "matrix": {
+        "title": "Matrix Code",
+        "description": "Text effect simulating The Matrix style, suitable for tech themes"
+      },
+      "digital": {
+        "title": "Digital Glitch",
+        "description": "Converting text to binary style, creating digital glitch effects"
+      }
+    },
+    "modal": {
+      "copyButton": "Copy Text",
+      "closeButton": "Close"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "blog": "Blog"
+  }
+} 
