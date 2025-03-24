@@ -3,10 +3,41 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Navigation } from '@/components/Navigation';
+import { Language } from '@/components/LanguageSwitcher';
 
-type Language = 'en' | 'zh';
+// 定义翻译内容的类型
+type TranslationType = {
+  title: string;
+  description: string;
+  categories: {
+    all: string;
+    social: string;
+    creative: string;
+    gaming: string;
+    business: string;
+  };
+  items: Array<{
+    id: number;
+    title: string;
+    preview: string;
+    description: string;
+    category: string;
+    effect: string;
+  }>;
+  modalActions: {
+    copy: string;
+    close: string;
+    tryIt: string;
+  };
+};
 
-const translations = {
+type TranslationsType = {
+  en: TranslationType;
+  zh: TranslationType;
+  // 其他语言将使用默认值
+};
+
+const translations: TranslationsType = {
   en: {
     title: 'Effect Gallery',
     description: 'Explore examples of text effects created with our generator',
@@ -239,8 +270,12 @@ const translations = {
 
 export default function GalleryPage() {
   const [language, setLanguage] = useState<Language>('en');
-  const t = translations[language];
-  const [selectedItem, setSelectedItem] = useState<any | null>(null);
+  // 添加类型安全的访问
+  const t = (language === 'en' || language === 'zh') 
+    ? translations[language] 
+    : translations.en; // 默认回退到英文
+    
+  const [selectedItem, setSelectedItem] = useState<typeof t.items[0] | null>(null);
   const [activeCategory, setActiveCategory] = useState('all');
 
   const handleLanguageChange = (lang: Language) => {
@@ -251,9 +286,7 @@ export default function GalleryPage() {
     navigator.clipboard.writeText(text);
   };
 
-  const filteredItems = activeCategory === 'all' 
-    ? t.items 
-    : t.items.filter(item => item.category === activeCategory);
+  const filteredItems: typeof t.items = t.items.filter(item => activeCategory === 'all' || item.category === activeCategory);
 
   return (
     <>
@@ -285,7 +318,7 @@ export default function GalleryPage() {
           </header>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredItems.map((item) => (
+            {filteredItems.map((item: typeof t.items[0]) => (
               <article
                 key={item.id}
                 onClick={() => setSelectedItem(item)}
@@ -314,31 +347,39 @@ export default function GalleryPage() {
           </div>
 
           {selectedItem && (
-            <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-              <div className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg max-w-2xl w-full p-6 border border-white/10">
-                <h3 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-                  {selectedItem.title}
-                </h3>
-                <div className="bg-black/30 rounded p-4 mb-4 overflow-x-auto border border-white/5">
-                  <p className="text-xl whitespace-nowrap">{selectedItem.preview}</p>
+            <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+              <div className="bg-gray-900 border border-gray-700 rounded-xl max-w-lg w-full p-6 m-4 shadow-2xl">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-xl font-bold">{selectedItem.title}</h3>
+                  <button 
+                    onClick={() => setSelectedItem(null)} 
+                    className="text-gray-400 hover:text-white"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
                 </div>
-                <p className="text-gray-400 mb-6">{selectedItem.description}</p>
-                <div className="flex flex-wrap gap-4 justify-end">
+                <div className="border border-gray-700 bg-black/30 p-4 rounded-lg mb-4">
+                  <p className="text-2xl text-center my-2">{selectedItem.preview}</p>
+                </div>
+                <p className="text-gray-300 mb-4">{selectedItem.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    onClick={() => copyText(selectedItem.preview)}
+                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded transition-colors flex-grow"
+                  >
+                    {t.modalActions.copy}
+                  </button>
                   <Link 
-                    href="/" 
-                    className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors"
+                    href={`/?effect=${selectedItem.effect}`} 
+                    className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded transition-colors flex-grow text-center"
                   >
                     {t.modalActions.tryIt}
                   </Link>
                   <button
-                    onClick={() => copyText(selectedItem.preview)}
-                    className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-                  >
-                    {t.modalActions.copy}
-                  </button>
-                  <button
                     onClick={() => setSelectedItem(null)}
-                    className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors"
+                    className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded transition-colors flex-grow md:flex-grow-0"
                   >
                     {t.modalActions.close}
                   </button>
